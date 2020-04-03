@@ -1,0 +1,82 @@
+{% extends 'home/header.html' %}
+
+{% block content %}
+
+<header class="masthead" style="background-image:url('/static/img/intro-bg.jpg?h=145cae4a8124ee5dac950230c1552d3c');">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="brand-heading" style="color: rgb(16,4,4);font-size: 100px;filter: blur(0px) brightness(146%) contrast(69%) grayscale(100%) hue-rotate(111deg) invert(7%) saturate(74%) sepia(0%);"><em>TEAM ARTEMIS</em></h1>
+                    <p class="intro-text">A responsive, Real time,&nbsp; Ship detection App.<br>Created with love.</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a></div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container"><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+        <div
+            class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger" href="#about">About</a></li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#">Welcome, {{user.first_name}}</a></li>
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">LOGOUT</a></li>
+                {% else %}
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">LOGIN</a></li>
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'signup' %}">SIGNUP</a></li>
+
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'upload' %}">Project Demo</a></li>
+                {% else %}
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="about" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>About Project</h2>
+                <p>SAR satellites provide useful information for object detection. A methodology needs to be developed to detect ships at ocean area using SAR data and estimate size of the detected ships. The methodology should be applicable for different
+                    resolution SAR data of same bands.&nbsp;</p>
+                <p>Output detected ships as a vector file, with an estimate of the size of ship.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="download" class="download-section content-section text-center" style="background-image:url('/static/img/downloads-bg.jpg?h=a1c980f5883ce005385e0ccdc3919d4c');">
+    <div class="container">
+        <div class="col-lg-8 mx-auto">
+            <h1>Live Project</h1>
+            <p>You can make live predictions on SAR images</p><a class="btn btn-primary btn-lg btn-default" type="button" href = "{% url 'upload' %}">visit Demo Page</a></div>
+    </div>
+</section>
+<section id="contact" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Contact us</h2>
+                <p>Feel free to leave us a comment on out project and do&nbsp;give some feedback about this project</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">&nbsp;</li>
+                    <li class="list-inline-item">&nbsp;</li>
+                    <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;github</span></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Start: Map Clean -->
+<div class="map-clean"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=+&amp;q=Paris%2C+France&amp;zoom=15" width="100%" height="450"></iframe></div>
+<!-- End: Map Clean -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright ©&nbsp;TeamArtemis 2020</p>
+    </div>
+</footer>
+
+{% endblock %}

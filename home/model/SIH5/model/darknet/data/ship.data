@@ -1,0 +1,5 @@
+classes = 1
+train = ./train.txt
+valid = ./testImages.txt
+names = ./data/ship.names
+backup = ./backup

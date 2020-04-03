@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Ship_image</title> 
+</head> 
+<body> 
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <div class="form-group">Enter Satellite Resolution (m/pixel:): <input class="form-control" name="scale" placeholder="0.8"></div>
+        <button type="submit">Upload</button> 
+    </form> 
+</body> 
+</html> 

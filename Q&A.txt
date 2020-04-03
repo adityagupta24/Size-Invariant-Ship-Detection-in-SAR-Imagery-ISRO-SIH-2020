@@ -1,0 +1,80 @@
+QnA
+
+Q. What is the problem you are trying to solve?
+
+-> We are trying to solve a ship detection problem for high resolution satellite images.
+
+Q. How does your idea address the problem?
+
+-> Our idea is to divide the high resolution satellite images into smaller images and then 
+   process it through YOLOv3 deep learning model to detect the ships in the smaller images
+   and again combine the smaller images to a single high resolution image.
+
+Q. Who are the target customers?
+
+-> ISRO(Indian Space Research Organisation) is the target customer.
+
+Q. What makes your idea unique?
+
+-> High Resolution satellite images can't be fed directly to any deep learning model as it leads
+   the generation of an enormous number of parameters.So, the dividing of high resolution image
+   into smaller images and then feeding them to the model makes our idea efficient and unique.
+
+Q. Do you have a revenue generation model?
+
+-> No
+
+Q. What are the geographies, do you think the idea would be suitable for?
+
+-> Our idea would be suitable for detecting all types of ships(size invariant) for any satellite image 
+   from all the major platforms like Google Earth,PlanetLabs etc.
+
+Q. What are the risks associated with your idea and how can you mitigate it?
+
+-> No deep learning model gives 100% accurate predictions.But we can try to increase the accuracy as much
+   as possible by adjusting various parameters.
+
+Q. Who are the stakeholders involved in order to take bring this idea/product/service to the market?
+
+-> ISRO
+
+Q. Is your idea patentable or patented?
+
+-> Our idea is non-patentable.
+
+Q. Is your idea built existing work? If so how is it different?
+
+-> Our ideas is live in the form of a website. It is different in the way that it can process high resolution
+   satellite images with great efficiency and accuracy.
+
+Q. What is the nature of the prototype/ proof of concept, you would be able to submit?
+
+-> Github repository (https://github.com/gauravv0412/artemis)
+
+Q. Have you completed pilot tests for your prototype/POC?
+
+-> Yes.The results of the pilot tests have been pushed to the github repository.
+
+Q. What is the approximate cost of developing the prototype?
+
+-> The prototype has been developed without any cost.
+
+Q. Please share the relevant elements while submitting the POC/ Prototype
+
+-> The block diagram has been pushed to the github repository in the form of an image.
+
+Q. What regulatory requirements have to be met to bring the idea to life?
+
+-> A powerful GPU is required at the backend to make predictions even faster.
+
+Q. Do you have a business plan/ commercialization strategy?
+
+-> No
+
+Q. What is rough estimate of manufacturing/operational costs?
+
+-> The operational costs are just for a server running the model.
+
+Q. What is volume of products/ amount of revenue do you expect to make in the first year?
+
+-> It is a non-revenue generation model.

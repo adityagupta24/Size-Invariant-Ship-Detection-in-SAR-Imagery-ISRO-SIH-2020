@@ -1,0 +1,1 @@
+web: gunicorn SIHportal.wsgi --log-file -

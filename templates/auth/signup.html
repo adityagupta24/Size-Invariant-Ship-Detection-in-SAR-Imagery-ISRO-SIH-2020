@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="/static/css/singup.min.css?h=9cc0af83481ea21faeadfb4501128622">
+</head>
+
+<body>
+    <!-- Start: Login Form Dark -->
+    <div class="login-dark">
+        <form method="post" style="background-color: rgb(39,51,65);">{% csrf_token %}
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline" style="color: rgb(23,23,24);"></i></div>
+            <div class="form-group">
+                <input class="form-control" name="first_name" placeholder="First Name">
+                <input class="form-control" name="last_name" placeholder="Last Name">
+                <input class="form-control" name="username" placeholder="UserName">
+                <input class="form-control" type="email" name="email" placeholder="Email">
+                <input class="form-control" type="password" name="pass_key" placeholder="Enter Passkey">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(38,46,57);">Sign Up</button></div>
+            <a class="forgot" href="#">Forgot your email or password?</a>
+        </form>
+        <img src="/assets/img/intro-bg.jpg?h=8b60e83800b3c6414be51b94622cecda">
+    </div>
+    <!-- End: Login Form Dark -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/singnup.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
+</body>
+
+</html>
